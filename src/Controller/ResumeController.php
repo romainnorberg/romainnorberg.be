@@ -18,8 +18,8 @@ class ResumeController extends AbstractController
      */
     public function index()
     {
-        return $this->render('resume/index.html.twig', [
+        return $this->render('resume/index.html.twig', array(
             'controller_name' => 'ResumeController',
-        ]);
+        ));
     }
 }
