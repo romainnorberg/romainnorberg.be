@@ -15,7 +15,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class HomeController extends AbstractController
 {
     /**
-     * @Route("/", name="home")
+     * @Route(
+     *     "/",
+     *     name="homepage",
+     *     host="{domain}",
+     *     defaults={"domain"="%root_domain%"},
+     *     requirements={"domain"="%root_domain%"}
+     * )
      */
     public function index()
     {
