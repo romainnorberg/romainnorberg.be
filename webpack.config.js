@@ -25,6 +25,10 @@ Encore
 
   .splitEntryChunks()
   .enableSingleRuntimeChunk()
+
+  .enableSourceMaps(!Encore.isProduction())
+  .enableVersioning(Encore.isProduction())
+
   .enableIntegrityHashes(Encore.isProduction())
   .configureBabel(null, {
     useBuiltIns: 'usage',
