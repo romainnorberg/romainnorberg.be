@@ -3,5 +3,6 @@
   "build/app.js": "/build/app.js",
   "build/resume.css": "/build/resume.css",
   "build/resume.js": "/build/resume.js",
-  "build/runtime.js": "/build/runtime.js"
+  "build/runtime.js": "/build/runtime.js",
+  "build/images/logo-romainnorberg.svg": "/build/images/logo-romainnorberg.svg"
 }

@@ -5,6 +5,7 @@
 // Read https://symfony.com/doc/current/frontend.html to learn more about how
 // to manage CSS and JavaScript files in Symfony applications.
 var Encore = require('@symfony/webpack-encore');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 Encore
   .setOutputPath('public/build/')
@@ -17,6 +18,11 @@ Encore
   .enableVersioning(false)
   .addEntry('app', './assets/js/app.js')
   .addEntry('resume', './assets/js/resume.js')
+
+  .addPlugin(new CopyWebpackPlugin([
+    {from: 'assets/images', to: 'images', toType: 'dir', ignore: [".DS_Store"]},
+  ]))
+
   .splitEntryChunks()
   .enableSingleRuntimeChunk()
   .enableIntegrityHashes(Encore.isProduction())

@@ -3,5 +3,44 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
+    <section class="hero is-warning is-large">
+        <div class="hero-body">
+            <div class="container">
+                <div class="section-header has-text-centered">
+                    <img class='logo' src='{{ asset('build/images/logo-romainnorberg.svg') }}'/>
+                </div>
+                <div class="section-body has-text-centered">
+                    <h1 class="title">No full stack... <br>but problem solver developer</h1>
+                    <p>
+                        Php developer, play with Symfony and PhalconPhp frameworks.<br>
+                        More on <a href='https://www.linkedin.com/in/romainnorberg' target='_blank'>LinkedIn</a> or
+                        <a href='https://github.com/romainnorberg' target='_blank'>Github</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="hero is-dark is-medium">
+        <div class="hero-body">
+            <div class="container">
+                <div class="section-header has-text-centered">
+                    <h2 class="title is-1 is-spaced"> Don't be shy, check my resume and say hi! </h2>
+                </div>
+                <div class="section-body has-text-centered">
+                    <a class="button is-default is-medium" href="{{ path('resume_homepage') }}">Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="has-text-centered">
+            <p class="field">
+                Made with <a href="https://symfony.com/" target="_blank">Symfony</a> &
+                <a href="https://bulma.io" target="_blank">Bulma</a><br>
+                Hosting: <a href="https://www.clever-cloud.com" target="_blank">Clever Cloud</a>
+            </p>
+        </div>
+    </section>
 {% endblock %}
