@@ -2,28 +2,28 @@
   "entrypoints": {
     "app": {
       "js": [
-        "/build/runtime.js",
-        "/build/app.js"
+        "/build/runtime.e59078a6.js",
+        "/build/app.cf49982d.js"
       ],
       "css": [
-        "/build/app.css"
+        "/build/app.19ef8e45.css"
       ]
     },
     "resume": {
       "js": [
-        "/build/runtime.js",
-        "/build/resume.js"
+        "/build/runtime.e59078a6.js",
+        "/build/resume.062b4382.js"
       ],
       "css": [
-        "/build/resume.css"
+        "/build/resume.5609346d.css"
       ]
     }
   },
   "integrity": {
-    "/build/runtime.js": "sha384-5WSgDNxkAY6j6/bzAcp3v//+PCXLgXCU3u5QgRXWiRfMnN4Ic/a/EF6HJnbRXik8",
-    "/build/app.js": "sha384-5FF49Wdu4rBqvJrvLwcP0WerMKKPOl8CV9IHYCzJkuSXIuxup+a9/Q4xn8JzAwY+",
-    "/build/app.css": "sha384-nMr4VRx6EnIeCXEOSXgL+IgdzO6+wFWqzaZe+vYyFqbhSAFKDS0xsl47m37Aoxu5",
-    "/build/resume.js": "sha384-8+/SV27QbRowW17F+Ajk9oKEscn1AiMvJw9qt1a6YHk09VU4/8gN50GWA3GNfDPO",
-    "/build/resume.css": "sha384-XnlwTWnGNgzt5czQllV+vX82YUZpMcODut4ouxY1qUDqcKgaW2vM38UwhYuAmiu8"
+    "/build/runtime.e59078a6.js": "sha384-5WSgDNxkAY6j6/bzAcp3v//+PCXLgXCU3u5QgRXWiRfMnN4Ic/a/EF6HJnbRXik8",
+    "/build/app.cf49982d.js": "sha384-5FF49Wdu4rBqvJrvLwcP0WerMKKPOl8CV9IHYCzJkuSXIuxup+a9/Q4xn8JzAwY+",
+    "/build/app.19ef8e45.css": "sha384-nMr4VRx6EnIeCXEOSXgL+IgdzO6+wFWqzaZe+vYyFqbhSAFKDS0xsl47m37Aoxu5",
+    "/build/resume.062b4382.js": "sha384-8+/SV27QbRowW17F+Ajk9oKEscn1AiMvJw9qt1a6YHk09VU4/8gN50GWA3GNfDPO",
+    "/build/resume.5609346d.css": "sha384-XnlwTWnGNgzt5czQllV+vX82YUZpMcODut4ouxY1qUDqcKgaW2vM38UwhYuAmiu8"
   }
 }
