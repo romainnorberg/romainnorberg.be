@@ -5,4 +5,5 @@ workflow "Main" {
 
 action "PHP-CS-Fixer" {
   uses = "docker://oskarstark/php-cs-fixer-ga"
+  args = "--diff --dry-run"
 }
