@@ -1,8 +1,9 @@
+dist: xenial
 language: php
 
 php:
   - 7.3
-  - 7.4
+  - 7.4snapshot
 
 # Host (https://docs.travis-ci.com/user/hosts)
 addons:
@@ -11,6 +12,12 @@ addons:
     - romainnorberg.local
     - resume.romainnorberg.local
     - blog.romainnorberg.local
+
+before_install:
+  - composer self-update
+
+install:
+  - composer install
 
 script:
   - phpunit

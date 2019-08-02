@@ -1,5 +1,11 @@
 <?php
 
+/*
+ * This file is part of romainnorberg.be source code.
+ * (c) Romain Norberg <romainnorberg@gmail.com>
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace App\Tests\Controller;
 
@@ -14,7 +20,7 @@ class HomeControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/');
 
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $this->assertSame(200, $client->getResponse()->getStatusCode());
         $this->assertStringContainsString('Home', $crawler->filter('title')->html()); // You can use any PHPUnit assertion
     }
 }
