@@ -1,0 +1,17 @@
+language: php
+
+php:
+  - 7.3
+  - 7.4
+
+# Host (https://docs.travis-ci.com/user/hosts)
+addons:
+  chrome: stable
+  hosts:
+    - romainnorberg.local
+    - resume.romainnorberg.local
+    - blog.romainnorberg.local
+
+script:
+  - phpunit
+
