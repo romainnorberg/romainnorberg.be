@@ -25,8 +25,6 @@ class ResumeController extends AbstractController
      */
     public function index()
     {
-        return $this->render('resume/index.html.twig', [
-            'controller_name' => 'ResumeController',
-        ]);
+        return $this->render('resume/index.html.twig');
     }
 }
