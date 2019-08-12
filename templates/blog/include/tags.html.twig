@@ -1,0 +1,5 @@
+<div class="flex-1 bg-white overflow-hidden px-6 py-4">
+    {% for tag in blog_post.tags %}
+        <a class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#{{ tag }}</a>
+    {% endfor %}
+</div>

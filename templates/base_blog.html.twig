@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Blog{% endblock %}</title>
+    {% block stylesheets %}
+        {{ encore_entry_link_tags('blog') }}
+    {% endblock %}
+</head>
+<body class="bg-gray-200 font-sans leading-normal tracking-normal">
+
+{% block body %}
+    {% include 'blog/include/navbar.html.twig' %}
+
+    {% block content %}{% endblock %}
+
+    {% include 'blog/include/footer.html.twig' %}
+{% endblock %}
+
+{% block javascripts %}
+    <script src="https://kit.fontawesome.com/cdf2f7a81a.js"></script>
+    {{ encore_entry_script_tags('blog') }}
+{% endblock %}
+</body>
+</html>
