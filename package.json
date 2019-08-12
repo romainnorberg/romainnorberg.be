@@ -1,23 +1,13 @@
 {
-    "devDependencies": {
-        "@symfony/webpack-encore": "^0.27.0",
-        "bulma": "^0.7.5",
-        "copy-webpack-plugin": "^5.0.3",
-        "core-js": "^3.0.0",
-        "extract-text-webpack-plugin": "^4.0.0-beta.0",
-        "node-sass": "^4.12.0",
-        "sass-loader": "^7.1.0",
-        "style-loader": "^0.23.1",
-        "webpack": "^4.36.1",
-        "webpack-cli": "^3.3.6",
-        "webpack-notifier": "^1.6.0"
-    },
-    "license": "UNLICENSED",
-    "private": true,
-    "scripts": {
-        "dev-server": "encore dev-server",
-        "dev": "encore dev",
-        "watch": "encore dev --watch",
-        "build": "encore production --progress"
-    }
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.27.0",
+    "bulma": "^0.7.5",
+    "copy-webpack-plugin": "^5.0.4",
+    "core-js": "^3.1.4",
+    "highlight.js": "^9.15.9",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.0.1",
+    "tailwindcss": "^1.1.0"
+  }
 }
