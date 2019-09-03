@@ -6,6 +6,7 @@
 parameters:
     root_domain: '%env(ROOT_DOMAIN)%'
     resume_domain: '%env(RESUME_DOMAIN)%'
+    blog_domain: '%env(BLOG_DOMAIN)%'
 
 services:
     # default configuration for services in *this* file

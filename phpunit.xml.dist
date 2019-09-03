@@ -15,6 +15,13 @@
         <env name="RESUME_DOMAIN" value="resume.romainnorberg.local"/>
         <env name="BLOG_DOMAIN" value="blog.romainnorberg.local"/>
         <server name="SYMFONY_PHPUNIT_REMOVE" value=""/>
+
+        <!-- ###+ symfony/messenger ### -->
+        <!-- Choose one of the transports below -->
+        <!-- MESSENGER_TRANSPORT_DSN=amqp://guest:guest@localhost:5672/%2f/messages -->
+        <!-- MESSENGER_TRANSPORT_DSN=doctrine://default -->
+        <!-- MESSENGER_TRANSPORT_DSN=redis://localhost:6379/messages -->
+        <!-- ###- symfony/messenger ### -->
     </php>
 
     <testsuites>
