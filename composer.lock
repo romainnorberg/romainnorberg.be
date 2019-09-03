@@ -1490,9 +1490,9 @@
             "authors": [
                 {
                     "name": "Colin O'Dell",
+                    "role": "Lead Developer",
                     "email": "colinodell@gmail.com",
-                    "homepage": "https://www.colinodell.com",
-                    "role": "Lead Developer"
+                    "homepage": "https://www.colinodell.com"
                 }
             ],
             "description": "PHP Markdown parser based on the CommonMark spec",
@@ -6250,19 +6250,19 @@
             "authors": [
                 {
                     "name": "Fabien Potencier",
+                    "role": "Lead Developer",
                     "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
+                    "homepage": "http://fabien.potencier.org"
                 },
                 {
                     "name": "Armin Ronacher",
-                    "email": "armin.ronacher@active-4.com",
-                    "role": "Project Founder"
+                    "role": "Project Founder",
+                    "email": "armin.ronacher@active-4.com"
                 },
                 {
                     "name": "Twig Team",
-                    "homepage": "https://twig.symfony.com/contributors",
-                    "role": "Contributors"
+                    "role": "Contributors",
+                    "homepage": "https://twig.symfony.com/contributors"
                 }
             ],
             "description": "Twig, the flexible, fast, and secure template language for PHP",
@@ -7266,18 +7266,18 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 },
                 {
                     "name": "Sebastian Heuer",
-                    "email": "sebastian@phpeople.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpeople.de"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sebastian@phpunit.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "sebastian@phpunit.de"
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
@@ -7494,8 +7494,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
                 }
             ],
             "description": "Library that provides collection, processing, and rendering functionality for PHP code coverage information.",
@@ -7766,8 +7766,8 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "lead",
-                    "email": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
                 }
             ],
             "description": "The PHP Unit Testing framework.",
@@ -9233,8 +9233,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "email": "arne@blankerts.de",
-                    "role": "Developer"
+                    "role": "Developer",
+                    "email": "arne@blankerts.de"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
