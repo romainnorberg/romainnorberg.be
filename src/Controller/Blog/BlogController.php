@@ -23,6 +23,9 @@ class BlogController extends AbstractController
      */
     private $blogPostRepository;
 
+    /**
+     * BlogController constructor.
+     */
     public function __construct(BlogPostRepository $blogPostRepository)
     {
         $this->blogPostRepository = $blogPostRepository;
