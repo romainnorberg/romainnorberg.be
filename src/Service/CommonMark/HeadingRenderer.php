@@ -21,10 +21,10 @@ class HeadingRenderer implements BlockRendererInterface
     public function render(AbstractBlock $block, ElementRendererInterface $htmlRenderer, $inTightList = false)
     {
         if (!($block instanceof Heading)) {
-            throw new \InvalidArgumentException('Incompatible block type: '.\get_class($block));
+            throw new \InvalidArgumentException('Incompatible block type: ' . \get_class($block));
         }
 
-        $tag = 'h'.$block->getLevel();
+        $tag = 'h' . $block->getLevel();
         $attrs = $block->getData('attributes', []);
 
         $element = new HtmlElement($tag, $attrs, $htmlRenderer->renderInlines($block->children()));
@@ -33,7 +33,7 @@ class HeadingRenderer implements BlockRendererInterface
 
         $element->setAttribute('id', $id);
         $element->setContents(
-            $element->getContents().' '.
+            $element->getContents() . ' ' .
             new HtmlElement('a', ['href' => "#{$id}", 'class' => 'permalink'], '#')
         );
 

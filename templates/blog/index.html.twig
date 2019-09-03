@@ -4,33 +4,28 @@
 
 {% block content %}
     <!--Container-->
-    <div class="container px-4 md:px-0 max-w-6xl mx-auto pt-16">
+    <div class="container px-4 md:px-0 max-w-6xl mx-auto pt-8">
         <div class="mx-0 sm:mx-6">
             <div class="bg-gray-200 w-full text-xl md:text-2xl text-gray-800 leading-normal rounded-t">
-                {% for blog_post in blog_posts %}
-                    <!--Lead Card-->
-                    <div class="flex h-full bg-white rounded overflow-hidden shadow-lg">
-                        <div class="w-full md:w-2/3 rounded-t">
-                            <a href="post.html" class="flex flex-wrap no-underline hover:no-underline">
-                                <img src="{{ blog_post.headerImage }}" class="h-full w-full shadow">
-                            </a>
-                        </div>
-
-                        <div class="w-full md:w-1/3 flex flex-col flex-grow flex-shrink">
+                <div class="flex flex-wrap justify-between -mx-6">
+                    {% for key, blog_post in blog_posts %}
+                        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
                             <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-                                <div class="w-full font-bold text-xl text-gray-900 p-6">
-                                    <a href="{{ path('blog_post', {'slug': blog_post.slug}) }}" class="flex flex-wrap no-underline hover:no-underline">
-                                        {{ blog_post.title }}
-                                    </a>
-                                </div>
-                                <p class="text-gray-800 font-serif text-base px-6 mb-5">
-                                    This starter template is an attempt to replicate the default Ghost theme "Casper"
-                                    using
-                                    Tailwind CSS and vanilla Javascript.
-                                </p>
+                                <a href="{{ path('blog_post', {'slug': blog_post.slug}) }}" class="flex flex-wrap no-underline hover:no-underline">
+                                    <img src="{{ blog_post.headerImage }}" class="h-64 w-full rounded-t pb-1">
+                                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                                        {{ include('blog/include/tags.html.twig') }}
+                                    </p>
+                                    <div class="w-full font-bold text-xl text-gray-900 px-6">
+                                        <a href="{{ path('blog_post', {'slug': blog_post.slug}) }}">
+                                            {{ blog_post.title }}
+                                        </a>
+                                    </div>
+                                    <p class="text-gray-800 font-serif text-base px-6 mb-5">
+                                        {{ blog_post.description }}
+                                    </p>
+                                </a>
                             </div>
-
-                            {{ include('blog/include/tags.html.twig') }}
 
                             <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
                                 <div class="flex items-center justify-between">
@@ -39,9 +34,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!--/Lead Card-->
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
