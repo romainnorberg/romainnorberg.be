@@ -7,9 +7,9 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Repository;
+namespace App\Domain\Blog\Repository;
 
-use App\Entity\Author;
+use App\Domain\Blog\Entity\Author;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 

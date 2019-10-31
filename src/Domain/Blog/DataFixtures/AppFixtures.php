@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\DataFixtures;
+namespace App\Domain\Blog\DataFixtures;
 
 use App\Entity\Author;
 use App\Entity\BlogPost;

@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Entity;
+namespace App\Domain\Blog\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -15,7 +15,7 @@ use Doctrine\ORM\Mapping as ORM;
  * BlogPost.
  *
  * @ORM\Table(name="blog_post")
- * @ORM\Entity(repositoryClass="App\Repository\BlogPostRepository")
+ * @ORM\Entity(repositoryClass="App\Domain\Blog\Repository\BlogPostRepository")
  * @ORM\HasLifecycleCallbacks
  */
 class BlogPost
@@ -91,8 +91,16 @@ class BlogPost
      * @var \DateTime
      *
      * @ORM\Column(name="updated_at", type="datetime")
+     *
      */
     private $updatedAt;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="is_active", type="boolean", options={"default"="0"})
+     */
+    private $isActive = false;
 
     /**
      * @return \Ramsey\Uuid\UuidInterface
@@ -316,5 +324,21 @@ class BlogPost
     public function preUpdate()
     {
         $this->setUpdatedAt(new \DateTime());
+    }
+
+    /**
+     * @return bool
+     */
+    public function isActive(): bool
+    {
+        return $this->isActive;
+    }
+
+    /**
+     * @param bool $isActive
+     */
+    public function setIsActive(bool $isActive): void
+    {
+        $this->isActive = $isActive;
     }
 }

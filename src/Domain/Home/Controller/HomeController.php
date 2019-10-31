@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Controller;
+namespace App\Domain\Home\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;

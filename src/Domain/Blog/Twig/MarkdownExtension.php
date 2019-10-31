@@ -7,9 +7,9 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Twig;
+namespace App\Domain\Blog\Twig;
 
-use App\Service\CommonMark\HeadingRenderer;
+use App\Domain\Blog\Service\CommonMark\HeadingRenderer;
 use League\CommonMark\Block\Element\FencedCode;
 use League\CommonMark\Block\Element\Heading;
 use League\CommonMark\Block\Element\IndentedCode;

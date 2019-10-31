@@ -1,3 +1,9 @@
-controllers:
-    resource: ../../src/Controller/
+blog-controllers:
+    resource: ../../src/Domain/Blog/Controller
+    type: annotation
+home-controllers:
+    resource: ../../src/Domain/Home/Controller
+    type: annotation
+resume-controllers:
+    resource: ../../src/Domain/Resume/Controller
     type: annotation

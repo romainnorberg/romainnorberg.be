@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Service\CommonMark;
+namespace App\Domain\Blog\Service\CommonMark;
 
 use Cocur\Slugify\Slugify;
 use League\CommonMark\Block\Element\AbstractBlock;

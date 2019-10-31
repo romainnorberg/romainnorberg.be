@@ -7,13 +7,15 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Controller\Blog;
+namespace App\Domain\Blog\Controller;
 
-use App\Entity\BlogPost;
-use App\Repository\BlogPostRepository;
+use App\Domain\Blog\Entity\BlogPost;
+use App\Domain\Blog\Repository\BlogPostRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
 class BlogController extends AbstractController
@@ -60,6 +62,10 @@ class BlogController extends AbstractController
      */
     public function post(BlogPost $blogPost): Response
     {
+        if(false === $blogPost->isActive()){
+            throw $this->createNotFoundException('The blog post does not active');
+        }
+
         return $this->render('blog/post.html.twig', [
             'blog_post' => $blogPost,
         ]);

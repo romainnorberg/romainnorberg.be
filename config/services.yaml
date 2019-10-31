@@ -20,11 +20,14 @@ services:
         resource: '../src/*'
         exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
 
-    # controllers are imported separately to make sure services can be injected
-    # as action arguments even if you don't extend any base controller class
-    App\Controller\:
-        resource: '../src/Controller'
+    App\Domain\Blog\Controller\:
+        resource: '../src/Domain/Blog/Controller'
         tags: ['controller.service_arguments']
 
-    # add more service definitions when explicit configuration is needed
-    # please note that last definitions always *replace* previous ones
+    App\Domain\Home\Controller\:
+        resource: '../src/Domain/Home/Controller'
+        tags: ['controller.service_arguments']
+
+    App\Domain\Resume\Controller\:
+        resource: '../src/Domain/Resume/Controller'
+        tags: ['controller.service_arguments']

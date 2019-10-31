@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Entity;
+namespace App\Domain\Blog\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -15,7 +15,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Author.
  *
  * @ORM\Table(name="author")
- * @ORM\Entity(repositoryClass="App\Repository\AuthorRepository")
+ * @ORM\Entity(repositoryClass="App\Domain\Blog\Repository\AuthorRepository")
  */
 class Author
 {
