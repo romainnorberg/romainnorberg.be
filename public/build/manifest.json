@@ -1,6 +1,6 @@
 {
   "build/admin.css": "/build/admin.c1bd9933.css",
-  "build/admin.js": "/build/admin.dc120e80.js",
+  "build/admin.js": "/build/admin.b63ce19d.js",
   "build/app.css": "/build/app.81b778d5.css",
   "build/app.js": "/build/app.5e9b0191.js",
   "build/blog.css": "/build/blog.c6e6e744.css",
@@ -8,5 +8,7 @@
   "build/resume.css": "/build/resume.232847e2.css",
   "build/resume.js": "/build/resume.40b52d89.js",
   "build/runtime.js": "/build/runtime.dca8fcdd.js",
+  "build/images/blogpost/how_to_migrate_from_travis_ci_to_github_actions/blog-githubactions-cover.jpg": "/build/images/blogpost/how_to_migrate_from_travis_ci_to_github_actions/blog-githubactions-cover.jpg",
+  "build/images/blogpost/how_to_migrate_from_travis_ci_to_github_actions/blog-githubactions-shivammathur-setup-php.jpg": "/build/images/blogpost/how_to_migrate_from_travis_ci_to_github_actions/blog-githubactions-shivammathur-setup-php.jpg",
   "build/images/logo-romainnorberg.svg": "/build/images/logo-romainnorberg.svg"
 }

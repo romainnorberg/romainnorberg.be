@@ -30,7 +30,7 @@
     "admin": {
       "js": [
         "/build/runtime.dca8fcdd.js",
-        "/build/admin.dc120e80.js"
+        "/build/admin.b63ce19d.js"
       ],
       "css": [
         "/build/admin.c1bd9933.css"
