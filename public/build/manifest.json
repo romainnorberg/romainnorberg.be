@@ -1,12 +1,12 @@
 {
-  "build/0.b087de0b.css": "/build/0.b087de0b.css",
-  "build/0.c70a72db.js": "/build/0.c70a72db.js",
-  "build/app.css": "/build/app.b196a678.css",
-  "build/app.js": "/build/app.8f5b51d5.js",
-  "build/blog.css": "/build/blog.1bddceb8.css",
-  "build/blog.js": "/build/blog.e1f19e61.js",
-  "build/resume.css": "/build/resume.68204963.css",
-  "build/resume.js": "/build/resume.e9528015.js",
-  "build/runtime.js": "/build/runtime.e75311e7.js",
+  "build/admin.css": "/build/admin.c1bd9933.css",
+  "build/admin.js": "/build/admin.dc120e80.js",
+  "build/app.css": "/build/app.81b778d5.css",
+  "build/app.js": "/build/app.5e9b0191.js",
+  "build/blog.css": "/build/blog.c6e6e744.css",
+  "build/blog.js": "/build/blog.bec69070.js",
+  "build/resume.css": "/build/resume.232847e2.css",
+  "build/resume.js": "/build/resume.40b52d89.js",
+  "build/runtime.js": "/build/runtime.dca8fcdd.js",
   "build/images/logo-romainnorberg.svg": "/build/images/logo-romainnorberg.svg"
 }

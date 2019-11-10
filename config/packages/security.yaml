@@ -1,15 +1,32 @@
 # see https://github.com/symfony/recipes/blob/master/symfony/security-bundle/3.3/config/packages/security.yaml
 security:
+    encoders:
+        App\Domain\Blog\Entity\User:
+            algorithm: auto
+
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
-            anonymous: true
+            anonymous: ~
+            guard:
+                authenticators:
+                    - App\Domain\Blog\Security\LoginFormAuthenticator
+            logout:
+                path: app_logout
+                # where to redirect after logout
+                # target: app_any_route
 
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/admin, roles: ROLE_ADMIN }
+    providers:
+        # used to reload user from session & other features (e.g. switch_user)
+        app_user_provider:
+            entity:
+                class: App\Domain\Blog\Entity\User
+                property: email
         # - { path: ^/profile, roles: ROLE_USER }

@@ -17,6 +17,6 @@ doctrine:
             Blog:
                 is_bundle: false
                 type: annotation
-                dir: '%kernel.project_dir%/src/Domain/Blog/Entity'
+                dir: '%kernel.project_dir%/src/App/Domain/Blog/Entity'
                 prefix: 'App\Domain\Blog\Entity'
                 alias: Blog

@@ -80,7 +80,7 @@
         "symfony/polyfill-php56": "*"
     },
     "scripts": {
-        "format": [
+        "lint": [
             "vendor/bin/php-cs-fixer fix"
         ],
         "check-security": [

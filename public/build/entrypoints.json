@@ -2,43 +2,39 @@
   "entrypoints": {
     "app": {
       "js": [
-        "/build/runtime.e75311e7.js",
-        "/build/app.8f5b51d5.js"
+        "/build/runtime.dca8fcdd.js",
+        "/build/app.5e9b0191.js"
       ],
       "css": [
-        "/build/app.b196a678.css"
+        "/build/app.81b778d5.css"
       ]
     },
     "resume": {
       "js": [
-        "/build/runtime.e75311e7.js",
-        "/build/resume.e9528015.js"
+        "/build/runtime.dca8fcdd.js",
+        "/build/resume.40b52d89.js"
       ],
       "css": [
-        "/build/resume.68204963.css"
+        "/build/resume.232847e2.css"
       ]
     },
     "blog": {
       "js": [
-        "/build/runtime.e75311e7.js",
-        "/build/0.c70a72db.js",
-        "/build/blog.e1f19e61.js"
+        "/build/runtime.dca8fcdd.js",
+        "/build/blog.bec69070.js"
       ],
       "css": [
-        "/build/0.b087de0b.css",
-        "/build/blog.1bddceb8.css"
+        "/build/blog.c6e6e744.css"
+      ]
+    },
+    "admin": {
+      "js": [
+        "/build/runtime.dca8fcdd.js",
+        "/build/admin.dc120e80.js"
+      ],
+      "css": [
+        "/build/admin.c1bd9933.css"
       ]
     }
-  },
-  "integrity": {
-    "/build/runtime.e75311e7.js": "sha384-/Zh0hTCgqMfXwZfeMIiueZzsKiHkvtqEOzKpZAuznIbgqg1DQpUQAwwNlO/9ToVH",
-    "/build/app.8f5b51d5.js": "sha384-v01I7W6HZsXeMvEQAUlOIdWqEpJ5OhhSL0bGuP6u0dCwMnY3Y8PI+1iT3jmbcusM",
-    "/build/app.b196a678.css": "sha384-nMr4VRx6EnIeCXEOSXgL+IgdzO6+wFWqzaZe+vYyFqbhSAFKDS0xsl47m37Aoxu5",
-    "/build/resume.e9528015.js": "sha384-5WHths/yys6N6BjWEGRo1h7hrI1iq9qcdtA9zIoF+dBAttuxCmfV3erSy2Rs9GsB",
-    "/build/resume.68204963.css": "sha384-XnlwTWnGNgzt5czQllV+vX82YUZpMcODut4ouxY1qUDqcKgaW2vM38UwhYuAmiu8",
-    "/build/0.c70a72db.js": "sha384-GG527LHG67tzOJA+QdvzBQr/WV5t7mP8C3ND7PxsU3eoVa/bAZgUDVj93WNk9YOC",
-    "/build/blog.e1f19e61.js": "sha384-t/aRk8IYTQ+k6v4hmFiwlgdf4bpSfyPIn4ZOyv0p+w+dn4BJKlUeI1u98It053Ny",
-    "/build/0.b087de0b.css": "sha384-c0jGChqOfkWMSoSFNGdcErdZrbpiGj6dlAQgb59KF6Gfv0MbdgjODDCuCKWuVwZ7",
-    "/build/blog.1bddceb8.css": "sha384-DLWCPzl8cKhy5fDfw0Nq1HEDrh2Gu0YK7bj7cIJYR6cDRONjX1TlLsbDxEy2Aop1"
   }
 }

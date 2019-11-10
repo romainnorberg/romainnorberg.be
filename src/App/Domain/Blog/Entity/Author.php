@@ -92,6 +92,11 @@ class Author
      */
     private $github;
 
+    public function __toString()
+    {
+        return $this->getName();
+    }
+
     /**
      * @return \Ramsey\Uuid\UuidInterface
      */

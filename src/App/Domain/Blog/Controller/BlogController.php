@@ -12,10 +12,8 @@ namespace App\Domain\Blog\Controller;
 use App\Domain\Blog\Entity\BlogPost;
 use App\Domain\Blog\Repository\BlogPostRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Cache;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\Routing\Annotation\Route;
 
 class BlogController extends AbstractController
@@ -62,7 +60,7 @@ class BlogController extends AbstractController
      */
     public function post(BlogPost $blogPost): Response
     {
-        if(false === $blogPost->isActive()){
+        if (false === $blogPost->isActive() && !$this->getUser()->hasRole('ROLE_ADMIN')) {
             throw $this->createNotFoundException('The blog post does not active');
         }
 

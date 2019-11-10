@@ -1,6 +1,29 @@
-#easy_admin:
-#    entities:
-#        # List the entity class name you want to manage
-#        - App\Entity\Product
-#        - App\Entity\Category
-#        - App\Entity\User
+easy_admin:
+    entities:
+        BlogPost:
+            class: App\Domain\Blog\Entity\BlogPost
+            form:
+                fields:
+                    - { property: 'author' }
+                    - { property: 'title' }
+                    - { property: 'slug' }
+                    - { property: 'description' }
+                    -
+                        property: 'body'
+                        type: 'App\Domain\Blog\Form\Admin\Type\Markdown'
+                    - { property: 'header_image' }
+                    -
+                        property: 'tags'
+                        type: 'collection'
+                    -
+                        property: 'is_active'
+                        type: 'checkbox'
+        Author:
+            class: App\Domain\Blog\Entity\Author
+    design:
+        assets:
+            css:
+                - 'build/admin.css'
+            js:
+                - 'build/runtime.js'
+                - 'build/admin.js'

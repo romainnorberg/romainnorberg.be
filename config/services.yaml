@@ -16,18 +16,6 @@ services:
 
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
-    App\:
-        resource: '../src/*'
-        exclude: '../src/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'
-
-    App\Domain\Blog\Controller\:
-        resource: '../src/Domain/Blog/Controller'
-        tags: ['controller.service_arguments']
-
-    App\Domain\Home\Controller\:
-        resource: '../src/Domain/Home/Controller'
-        tags: ['controller.service_arguments']
-
-    App\Domain\Resume\Controller\:
-        resource: '../src/Domain/Resume/Controller'
-        tags: ['controller.service_arguments']
+    App\Domain\:
+        resource: '../src/App/Domain/*'
+        exclude: '../src/App/Domain/{Blog,Home,Resume}/{DependencyInjection,Entity,Migrations,Tests,Kernel.php}'

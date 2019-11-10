@@ -91,7 +91,6 @@ class BlogPost
      * @var \DateTime
      *
      * @ORM\Column(name="updated_at", type="datetime")
-     *
      */
     private $updatedAt;
 
@@ -229,7 +228,7 @@ class BlogPost
         return $this->author;
     }
 
-    public function getHeaderImage(): string
+    public function getHeaderImage(): ?string
     {
         return $this->headerImage;
     }
@@ -241,7 +240,7 @@ class BlogPost
         return $this;
     }
 
-    public function getTags(): array
+    public function getTags(): ?array
     {
         return $this->tags;
     }
