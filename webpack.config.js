@@ -18,22 +18,23 @@ Encore
   .addEntry('app', './assets/js/app.js')
   .addEntry('resume', './assets/js/resume.js')
   .addEntry('blog', './assets/js/blog.js')
+  .addEntry('admin', './assets/js/admin/admin.js')
 
   .addPlugin(new CopyWebpackPlugin([
     {from: 'assets/images', to: 'images', toType: 'dir', ignore: [".DS_Store"]},
   ]))
 
-  .splitEntryChunks()
+  //.splitEntryChunks()
   .enableSingleRuntimeChunk()
 
-  .enableSourceMaps(!Encore.isProduction())
+  //.enableSourceMaps(!Encore.isProduction())
   .enableVersioning(Encore.isProduction())
 
-  .enableIntegrityHashes(Encore.isProduction())
-  .configureBabel(null, {
-    useBuiltIns: 'usage',
-    corejs:      3,
-  })
+  //.enableIntegrityHashes(Encore.isProduction())
+  //.configureBabel(null, {
+  //  useBuiltIns: 'usage',
+  //  corejs:      3,
+  //})
 ;
 
 Encore.enableSassLoader(function (options) {
@@ -47,4 +48,13 @@ Encore.enablePostCssLoader(function (options) {
   }
 });
 
-module.exports = Encore.getWebpackConfig();
+
+const config = Encore.getWebpackConfig();
+
+config.watch = !Encore.isProduction();
+config.watchOptions = {
+  ignored: ['node_modules'],
+  poll:    500 // Check for changes every 500ms
+};
+
+module.exports = config;

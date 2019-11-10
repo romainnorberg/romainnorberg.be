@@ -20,6 +20,8 @@
 {% block javascripts %}
     <script src="https://kit.fontawesome.com/cdf2f7a81a.js"></script>
     {{ encore_entry_script_tags('blog') }}
+
+    {{ include('include/analytics.html.twig') }}
 {% endblock %}
 </body>
 </html>
