@@ -1,0 +1,60 @@
+on: [push]
+name: Main
+jobs:
+  symfony:
+    runs-on: ubuntu-latest
+
+    services:
+      mysql:
+        image: mysql:5.7
+        env:
+          MYSQL_ROOT_PASSWORD: root
+        ports:
+          - 3306
+        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+    steps:
+      - name: Verify MySQL connection from host
+        run: |
+          sudo apt-get install -y mysql-client libmysqlclient-dev
+          mysql --host 127.0.0.1 --port ${{ job.services.mysql.ports[3306] }} -uroot -proot -e "SHOW GRANTS FOR 'root'@'localhost'"
+
+      - name: Add mysql test database & user
+        run: |
+          mysql -uroot -h127.0.0.1 -proot -e "CREATE DATABASE IF NOT EXISTS database_test;"
+
+      # doc: https://github.com/marketplace/actions/setup-php-action
+      - name: Setup PHP
+        uses: shivammathur/setup-php@master
+        with:
+          php-version: '7.3'
+          extension-csv: apcu
+
+      - name: Configure PHP
+        run: |
+          sudo phpdismod -s cli xdebug
+
+      - name: Check PHP
+        run: |
+          php -v
+
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+
+      - name: Install composer dependencies
+        run: |
+          composer global require hirak/prestissimo --no-interaction --no-ansi --no-progress --no-suggest # downloading dependencies in parallel
+          composer install --no-interaction --no-ansi --no-progress --no-suggest -o
+          composer validate --no-check-all --strict
+
+      - name: Load fixtures
+        run: |
+          ./bin/console doctrine:schema:create --env=test
+          ./bin/console doctrine:fixtures:load -n --env=test
+
+      - name: Run tests
+        run: |
+          ./vendor/bin/phpunit
+        env:
+          SYMFONY_ENV: test
