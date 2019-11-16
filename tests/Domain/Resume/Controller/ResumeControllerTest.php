@@ -20,7 +20,7 @@ class ResumeControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/');
 
-        $this->assertSame(200, $client->getResponse()->getStatusCode());
+        $this->assertSame(200, $client->getResponse()->getStatusCode(), $crawler->filter('h1.exception-message')->count() > 0 ? $crawler->filter('h1.exception-message')->html() : 'Unknown');
         $this->assertStringContainsString('Resume', $crawler->filter('title')->html());
     }
 }
