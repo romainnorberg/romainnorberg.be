@@ -48,6 +48,10 @@ jobs:
           composer install --no-interaction --no-ansi --no-progress --no-suggest -o
           composer validate --no-check-all --strict
 
+      - name: Load fixtures
+        run: |
+          bin/console doctrine:fixtures:load --env=test
+
       - name: Run tests
         run: |
           ./vendor/bin/phpunit
