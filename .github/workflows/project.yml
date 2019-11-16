@@ -50,7 +50,8 @@ jobs:
 
       - name: Load fixtures
         run: |
-          bin/console doctrine:fixtures:load --env=test
+          ./bin/console doctrine:schema:create --env=test
+          ./bin/console doctrine:fixtures:load -n --env=test
 
       - name: Run tests
         run: |
