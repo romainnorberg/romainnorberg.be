@@ -1,6 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
-<html><body>
-<p>We are using /SMS API services in this example</p>
+<?php return '<p>We are using /SMS API services in this example</p>
 <h3 id="prerequisites-assuming-that-you-have">Prerequisites, assuming that you have: <a href="#prerequisites-assuming-that-you-have" class="permalink">#</a>
 </h3>
 <ul>
@@ -23,21 +21,21 @@
 </h2>
 <p>Pre-request scripts are snippets of code associated with a collection request that are executed before the request is sent. This is perfect for use-cases like including the timestamp in the request headers or sending a random alphanumeric string in the URL parameters.</p>
 <p><em>Doc: <a href="https://www.getpostman.com/docs/v6/postman/scripts/pre_request_scripts">Postman Pre-request scripts</a></em></p>
-<h1 id="let-s-go">Let's go <a href="#let-s-go" class="permalink">#</a>
+<h1 id="let-s-go">Let\'s go <a href="#let-s-go" class="permalink">#</a>
 </h1>
 <h2 id="process">Process <a href="#process" class="permalink">#</a>
 </h2>
 <h3 id="1-import-curl">1) Import curl <a href="#1-import-curl" class="permalink">#</a>
 </h3>
 <p>Copy/paste content of <a href="https://gist.github.com/romainnorberg/9847a6707a26a77039358d85cce3d7aa#file-request-curl">request.curl</a> into prompt window <em>(File &gt; Import &gt; "Paste Raw text")</em> and confirm</p>
-<pre><code class="language-json hljs json" data-lang="json">curl -X GET \
-  https://api.ovh.com/<span class="hljs-number">1.0</span>/sms \
--H 'Content-Type: application/json; charset=utf<span class="hljs-number">-8</span>' \
--H 'X-Ovh-Application: xxxxxx' \
--H 'X-Ovh-Consumer: {{lf_ovh_api_app_consumer_key}}' \
--H 'X-Ovh-Signature: {{lf_ovh_api_app_consumer_signature}}' \
--H 'X-Ovh-Timestamp: {{lf_ovh_api_app_timestamp}}' \
--H 'cache-control: no-cache'
+<pre><code class="language-json hljs json" data-lang="json">curl -X GET \\
+  https://api.ovh.com/<span class="hljs-number">1.0</span>/sms \\
+-H \'Content-Type: application/json; charset=utf<span class="hljs-number">-8</span>\' \\
+-H \'X-Ovh-Application: xxxxxx\' \\
+-H \'X-Ovh-Consumer: {{lf_ovh_api_app_consumer_key}}\' \\
+-H \'X-Ovh-Signature: {{lf_ovh_api_app_consumer_signature}}\' \\
+-H \'X-Ovh-Timestamp: {{lf_ovh_api_app_timestamp}}\' \\
+-H \'cache-control: no-cache\'
 </code></pre>
 <p><img src="https://thepracticaldev.s3.amazonaws.com/i/dlkneheob182kwalioaa.png" alt="import curl request"></p>
 <h3 id="2-define-variables">2) Define variables <a href="#2-define-variables" class="permalink">#</a>
@@ -77,28 +75,28 @@
     <span class="hljs-attr">url</span>: <span class="hljs-string">"https://api.ovh.com/1.0/auth/time"</span>,
     <span class="hljs-attr">method</span>: <span class="hljs-string">"GET"</span>,
     <span class="hljs-attr">headers</span>: {
-        <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json; charset=utf-8'</span>
+        <span class="hljs-string">\'Content-Type\'</span>: <span class="hljs-string">\'application/json; charset=utf-8\'</span>
     },
     <span class="hljs-attr">body</span>: {}
  },
  <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err, res</span>) </span>{
      
     pm.expect(err).to.not.be.ok;
-    pm.expect(res).to.have.property(<span class="hljs-string">'code'</span>, <span class="hljs-number">200</span>);
-    pm.expect(res).to.have.property(<span class="hljs-string">'status'</span>, <span class="hljs-string">'OK'</span>);
+    pm.expect(res).to.have.property(<span class="hljs-string">\'code\'</span>, <span class="hljs-number">200</span>);
+    pm.expect(res).to.have.property(<span class="hljs-string">\'status\'</span>, <span class="hljs-string">\'OK\'</span>);
     
     <span class="hljs-keyword">var</span> serverTimestamp = res.text();
     postman.setGlobalVariable(<span class="hljs-string">"lf_ovh_api_app_server_timestamp"</span>, serverTimestamp);
     
     <span class="hljs-keyword">var</span> time_delta = serverTimestamp - <span class="hljs-built_in">Math</span>.round(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getTime()/<span class="hljs-number">1000</span>);
     <span class="hljs-keyword">var</span> now = <span class="hljs-built_in">Math</span>.round(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>().getTime()/<span class="hljs-number">1000</span>) + time_delta;
-    <span class="hljs-keyword">var</span> body = <span class="hljs-string">''</span>;
+    <span class="hljs-keyword">var</span> body = <span class="hljs-string">\'\'</span>;
     
     postman.setGlobalVariable(<span class="hljs-string">"lf_ovh_api_app_timestamp"</span>, now);
     
-    <span class="hljs-keyword">var</span> toSign = environment.lf_ovh_api_app_secret + <span class="hljs-string">'+'</span> + environment.lf_ovh_api_app_consumer_key + <span class="hljs-string">'+'</span> + pm.request.method + <span class="hljs-string">'+'</span> + pm.request.url.toString() + <span class="hljs-string">'+'</span> + body + <span class="hljs-string">'+'</span> + now;
+    <span class="hljs-keyword">var</span> toSign = environment.lf_ovh_api_app_secret + <span class="hljs-string">\'+\'</span> + environment.lf_ovh_api_app_consumer_key + <span class="hljs-string">\'+\'</span> + pm.request.method + <span class="hljs-string">\'+\'</span> + pm.request.url.toString() + <span class="hljs-string">\'+\'</span> + body + <span class="hljs-string">\'+\'</span> + now;
     
-    <span class="hljs-keyword">var</span> signature = <span class="hljs-string">'$1$'</span> + CryptoJS.SHA1(toSign);
+    <span class="hljs-keyword">var</span> signature = <span class="hljs-string">\'$1$\'</span> + CryptoJS.SHA1(toSign);
     
     postman.setGlobalVariable(<span class="hljs-string">"lf_ovh_api_app_consumer_signature"</span>, signature);
  }
@@ -106,12 +104,12 @@
 </code></pre>
 <h3 id="5-try-to-run">5) Try to run <a href="#5-try-to-run" class="permalink">#</a>
 </h3>
-<p>Normally you should then have the following response from OVH API &eth;&#159;&#142;&#137;&eth;&#159;&#142;&#137;</p>
+<p>Normally you should then have the following response from OVH API 🎉🎉</p>
 <pre><code class="language-json hljs json" data-lang="json">  [
     <span class="hljs-string">"sms-rnXXXXX-1"</span>
   ]
 </code></pre>
-<p>&eth;&#159;&#152;&nbsp;the API returns you an error? check your credentials, check "Possibles issues" section below.</p>
+<p>😠the API returns you an error? check your credentials, check "Possibles issues" section below.</p>
 <h2 id="possibles-issues">Possibles issues <a href="#possibles-issues" class="permalink">#</a>
 </h2>
 <h3 id="empty-response">Empty response [] <a href="#empty-response" class="permalink">#</a>
@@ -129,7 +127,7 @@
 <p>Do not hesitate to leave a comment with the error encountered.</p>
 <h2 id="evolution">Evolution <a href="#evolution" class="permalink">#</a>
 </h2>
-<p>&acirc;&#154;&nbsp;&iuml;&cedil;&#143; the "Pre-request" script only supports the GET method for the moment. You are free to upgrade the script to support POST, PUT &amp; DELETE methods.</p>
+<p>⚠️ the "Pre-request" script only supports the GET method for the moment. You are free to upgrade the script to support POST, PUT &amp; DELETE methods.</p>
 <h2 id="alternative">Alternative <a href="#alternative" class="permalink">#</a>
 </h2>
 <p>Use and test the OVH API directly from the browser with your OVH account: https://docs.ovh.com/fr/private-cloud/connexion-a-l-api-ovh/</p>
@@ -137,5 +135,4 @@
 <p><img src="https://docs.ovh.com/fr/private-cloud/connexion-a-l-api-ovh/images/api.jpg" alt="ovh-api-service"></p>
 <h2 id="script-sources">Script sources <a href="#script-sources" class="permalink">#</a>
 </h2>
-<p>Check <a href="https://gist.github.com/romainnorberg/9847a6707a26a77039358d85cce3d7aa">https://gist.github.com/romainnorberg/9847a6707a26a77039358d85cce3d7aa</a></p>
-                            </body></html>
+<p>Check <a href="https://gist.github.com/romainnorberg/9847a6707a26a77039358d85cce3d7aa">https://gist.github.com/romainnorberg/9847a6707a26a77039358d85cce3d7aa</a></p>';
