@@ -23,9 +23,8 @@ class BlogPostControllerTest extends WebTestCase
 
         $crawler = $client->request('GET', '/post/work-with-ovh-api-using-postman');
 
-        $this->assertSame(200, $client->getResponse()->getStatusCode());
+        $this->assertSame(200, $client->getResponse()->getStatusCode(), $crawler->filter('h1.exception-message')->count() > 0 ? $crawler->filter('h1.exception-message')->html() : 'Unknown');
         $this->assertStringContainsString('Work with OVH API using Postman', $crawler->filter('title')->html());
-        //$this->assertStringContainsString('Work with OVH API using Postman', $crawler->filter('div.markup')->html());
 
         $this->assertMatchesHtmlSnapshot($crawler->filter('div.markup')->html());
     }
