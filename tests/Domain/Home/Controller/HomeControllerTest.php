@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Tests\Controller;
+namespace App\Tests\Domain\Home\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
@@ -21,6 +21,6 @@ class HomeControllerTest extends WebTestCase
         $crawler = $client->request('GET', '/');
 
         $this->assertSame(200, $client->getResponse()->getStatusCode());
-        $this->assertStringContainsString('Home', $crawler->filter('title')->html()); // You can use any PHPUnit assertion
+        $this->assertStringContainsString('Home', $crawler->filter('title')->html());
     }
 }
