@@ -64,92 +64,55 @@ class User implements UserInterface
         return $this->email;
     }
 
-    /**
-     * @param string $email
-     *
-     * @return User
-     */
-    public function setEmail(string $email): User
+    public function setEmail(string $email): self
     {
         $this->email = $email;
 
         return $this;
     }
 
-    /**
-     * @return string
-     */
     public function getPassword(): string
     {
         return $this->password;
     }
 
-    /**
-     * @param string $password
-     *
-     * @return User
-     */
-    public function setPassword(string $password): User
+    public function setPassword(string $password): self
     {
         $this->password = $password;
 
         return $this;
     }
 
-    /**
-     * @return null|string
-     */
     public function getPlainPassword(): ?string
     {
         return $this->plainPassword;
     }
 
-    /**
-     * @param null|string $plainPassword
-     *
-     * @return User
-     */
-    public function setPlainPassword(?string $plainPassword): User
+    public function setPlainPassword(?string $plainPassword): self
     {
         $this->plainPassword = $plainPassword;
 
         return $this;
     }
 
-    /**
-     * @return null|string
-     */
     public function getPasswordRequestToken(): ?string
     {
         return $this->passwordRequestToken;
     }
 
-    /**
-     * @param null|string $passwordRequestToken
-     *
-     * @return User
-     */
-    public function setPasswordRequestToken(?string $passwordRequestToken): User
+    public function setPasswordRequestToken(?string $passwordRequestToken): self
     {
         $this->passwordRequestToken = $passwordRequestToken;
 
         return $this;
     }
 
-    /**
-     * @return array
-     */
     public function getRoles(): array
     {
         return $this->roles;
     }
 
-    /**
-     * @param array $roles
-     *
-     * @return User
-     */
-    public function setRoles(array $roles): User
+    public function setRoles(array $roles): self
     {
         $this->roles = $roles;
 

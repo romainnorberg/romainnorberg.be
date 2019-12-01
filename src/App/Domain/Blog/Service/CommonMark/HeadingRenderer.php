@@ -9,8 +9,8 @@
 
 namespace App\Domain\Blog\Service\CommonMark;
 
-use InvalidArgumentException;
 use Cocur\Slugify\Slugify;
+use InvalidArgumentException;
 use League\CommonMark\Block\Element\AbstractBlock;
 use League\CommonMark\Block\Element\Heading;
 use League\CommonMark\Block\Renderer\BlockRendererInterface;

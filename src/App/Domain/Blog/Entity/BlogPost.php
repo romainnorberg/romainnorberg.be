@@ -9,10 +9,10 @@
 
 namespace App\Domain\Blog\Entity;
 
-use Ramsey\Uuid\UuidInterface;
-use DateTimeInterface;
 use DateTime;
+use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
+use Ramsey\Uuid\UuidInterface;
 
 /**
  * BlogPost.
@@ -211,7 +211,6 @@ class BlogPost
     /**
      * Set author.
      *
-     *
      * @return BlogPost
      */
     public function setAuthor(Author $author)
@@ -328,17 +327,11 @@ class BlogPost
         $this->setUpdatedAt(new DateTime());
     }
 
-    /**
-     * @return bool
-     */
     public function isActive(): bool
     {
         return $this->isActive;
     }
 
-    /**
-     * @param bool $isActive
-     */
     public function setIsActive(bool $isActive): void
     {
         $this->isActive = $isActive;

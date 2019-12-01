@@ -2,8 +2,8 @@
 
 namespace App\Controller\User;
 
-use Exception;
 use App\Form\UserLoginType;
+use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;

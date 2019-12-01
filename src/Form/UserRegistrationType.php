@@ -24,9 +24,6 @@ class UserRegistrationType extends AbstractType
             ->add('submit', SubmitType::class);
     }
 
-    /**
-     * @param OptionsResolver $resolver
-     */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(['data_class' => User::class]);

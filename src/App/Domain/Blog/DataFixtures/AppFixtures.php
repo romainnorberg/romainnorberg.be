@@ -9,9 +9,9 @@
 
 namespace App\Domain\Blog\DataFixtures;
 
-use DateTime;
 use App\Domain\Blog\Entity\Author;
 use App\Domain\Blog\Entity\BlogPost;
+use DateTime;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 

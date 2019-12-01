@@ -19,11 +19,6 @@ class RegistrationController extends AbstractController
 {
     /**
      * @Route("/register", name="register", methods={"GET", "POST"})
-     * @param Request                      $request
-     * @param UserPasswordEncoderInterface $encoder
-     * @param TokenStorageInterface        $tokenStorage
-     * @param EntityManagerInterface       $entityManager
-     * @param SessionInterface             $session
      *
      * @return RedirectResponse|Response
      */
@@ -33,8 +28,7 @@ class RegistrationController extends AbstractController
         TokenStorageInterface $tokenStorage,
         EntityManagerInterface $entityManager,
         SessionInterface $session
-    )
-    {
+    ) {
         $user = new User();
         $form = $this->createForm(UserRegistrationType::class, $user);
         $form->handleRequest($request);
