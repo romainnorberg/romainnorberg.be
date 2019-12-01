@@ -27,7 +27,7 @@ jobs:
       - name: Setup PHP
         uses: shivammathur/setup-php@master
         with:
-          php-version: '7.3'
+          php-version: '7.4'
           extension-csv: apcu
 
       - name: Configure PHP

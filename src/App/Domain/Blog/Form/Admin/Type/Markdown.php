@@ -10,7 +10,7 @@ use Symfony\Component\Form\FormView;
 
 class Markdown extends AbstractType
 {
-    private $configManager;
+    private ConfigManager $configManager;
 
     public function __construct(ConfigManager $configManager)
     {

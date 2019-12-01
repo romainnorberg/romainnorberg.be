@@ -9,6 +9,7 @@
 
 namespace App\Domain\Blog\Service\CommonMark;
 
+use InvalidArgumentException;
 use Cocur\Slugify\Slugify;
 use League\CommonMark\Block\Element\AbstractBlock;
 use League\CommonMark\Block\Element\Heading;
@@ -21,7 +22,7 @@ class HeadingRenderer implements BlockRendererInterface
     public function render(AbstractBlock $block, ElementRendererInterface $htmlRenderer, $inTightList = false)
     {
         if (!($block instanceof Heading)) {
-            throw new \InvalidArgumentException('Incompatible block type: ' . \get_class($block));
+            throw new InvalidArgumentException('Incompatible block type: ' . \get_class($block));
         }
 
         $tag = 'h' . $block->getLevel();

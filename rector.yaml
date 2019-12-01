@@ -1,0 +1,14 @@
+# rector.yaml
+parameters:
+  sets:
+    - 'code-quality'
+    - 'php74'
+    - 'symfony40'
+    #- 'dead-code'
+  autoload_paths:
+    - 'vendor/autoload.php'
+  paths:
+    - 'src'
+    - 'tests'
+  exclude_paths:
+    - 'src/Migrations/*'

@@ -9,6 +9,7 @@
 
 namespace App\Domain\Blog\Entity;
 
+use Ramsey\Uuid\UuidInterface;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -27,70 +28,70 @@ class Author
      * @ORM\GeneratedValue(strategy="CUSTOM")
      * @ORM\CustomIdGenerator(class="Ramsey\Uuid\Doctrine\UuidGenerator")
      */
-    private $id;
+    private UuidInterface $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255, unique=true)
      */
-    private $name;
+    private string $name;
 
     /**
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
      */
-    private $title;
+    private string $title;
 
     /**
      * @var string
      *
      * @ORM\Column(name="username", type="string", length=255, unique=true)
      */
-    private $username;
+    private string $username;
 
     /**
      * @var string
      *
      * @ORM\Column(name="company", type="string", length=255)
      */
-    private $company;
+    private string $company;
 
     /**
      * @var string
      *
      * @ORM\Column(name="short_bio", type="string", length=500)
      */
-    private $shortBio;
+    private string $shortBio;
 
     /**
      * @var string
      *
      * @ORM\Column(name="phone", type="string", length=255, nullable=true)
      */
-    private $phone;
+    private ?string $phone;
 
     /**
      * @var string
      *
      * @ORM\Column(name="facebook", type="string", length=255, nullable=true)
      */
-    private $facebook;
+    private ?string $facebook;
 
     /**
      * @var string
      *
      * @ORM\Column(name="twitter", type="string", length=255, nullable=true)
      */
-    private $twitter;
+    private ?string $twitter;
 
     /**
      * @var string
      *
      * @ORM\Column(name="github", type="string", length=255, nullable=true)
      */
-    private $github;
+    private ?string $github;
 
     public function __toString()
     {

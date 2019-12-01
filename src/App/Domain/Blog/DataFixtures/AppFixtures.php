@@ -9,6 +9,7 @@
 
 namespace App\Domain\Blog\DataFixtures;
 
+use DateTime;
 use App\Domain\Blog\Entity\Author;
 use App\Domain\Blog\Entity\BlogPost;
 use Doctrine\Bundle\FixturesBundle\Fixture;
@@ -40,7 +41,7 @@ class AppFixtures extends Fixture
             ->setBody(file_get_contents(__DIR__ . '/Blog/post01.md'))
             ->setHeaderImage('https://source.unsplash.com/1200x600/?postbox')
             ->setTags(['ovh', 'api', 'postman', 'pre-request'])
-            ->setCreatedAt(new \DateTime('2018-11-01'))
+            ->setCreatedAt(new DateTime('2018-11-01'))
             ->setAuthor($author)
             ->setIsActive(true);
 
