@@ -2,6 +2,7 @@
   "devDependencies": {
     "@symfony/webpack-encore": "^0.27.0",
     "bulma": "^0.7.5",
+    "bulma-helpers": "^0.3.8",
     "copy-webpack-plugin": "^5.0.4",
     "core-js": "3",
     "easymde": "^2.8.0",

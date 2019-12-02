@@ -21,7 +21,7 @@ class BlogController extends AbstractController
     /**
      * @var BlogPostRepository
      */
-    private $blogPostRepository;
+    private BlogPostRepository $blogPostRepository;
 
     /**
      * BlogController constructor.
@@ -60,7 +60,7 @@ class BlogController extends AbstractController
      */
     public function post(BlogPost $blogPost): Response
     {
-        if (false === $blogPost->isActive() && !$this->getUser()->hasRole('ROLE_ADMIN')) {
+        if (!$blogPost->isActive() && ($this->getUser() && !$this->getUser()->hasRole('ROLE_ADMIN'))) {
             throw $this->createNotFoundException('The blog post does not active');
         }
 
