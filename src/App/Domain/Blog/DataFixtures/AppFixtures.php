@@ -42,6 +42,7 @@ class AppFixtures extends Fixture
             ->setHeaderImage('https://source.unsplash.com/1200x600/?postbox')
             ->setTags(['ovh', 'api', 'postman', 'pre-request'])
             ->setCreatedAt(new DateTime('2018-11-01'))
+            ->setUpdatedAt(new DateTime('2018-11-01'))
             ->setAuthor($author)
             ->setIsActive(true);
 

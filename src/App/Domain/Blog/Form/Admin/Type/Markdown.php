@@ -10,13 +10,6 @@ use Symfony\Component\Form\FormView;
 
 class Markdown extends AbstractType
 {
-    private ConfigManager $configManager;
-
-    public function __construct(ConfigManager $configManager)
-    {
-        $this->configManager = $configManager;
-    }
-
     /**
      * {@inheritdoc}
      */

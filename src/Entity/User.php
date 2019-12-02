@@ -56,21 +56,6 @@ class User implements UserInterface
         return $this->id;
     }
 
-    /**
-     * @return string
-     */
-    public function getEmail(): ?string
-    {
-        return $this->email;
-    }
-
-    public function setEmail(string $email): self
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
     public function getPassword(): string
     {
         return $this->password;
@@ -88,18 +73,6 @@ class User implements UserInterface
         return $this->plainPassword;
     }
 
-    public function setPlainPassword(?string $plainPassword): self
-    {
-        $this->plainPassword = $plainPassword;
-
-        return $this;
-    }
-
-    public function getPasswordRequestToken(): ?string
-    {
-        return $this->passwordRequestToken;
-    }
-
     public function setPasswordRequestToken(?string $passwordRequestToken): self
     {
         $this->passwordRequestToken = $passwordRequestToken;
@@ -110,13 +83,6 @@ class User implements UserInterface
     public function getRoles(): array
     {
         return $this->roles;
-    }
-
-    public function setRoles(array $roles): self
-    {
-        $this->roles = $roles;
-
-        return $this;
     }
 
     /**
