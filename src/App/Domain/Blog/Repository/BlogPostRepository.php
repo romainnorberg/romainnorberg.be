@@ -11,7 +11,7 @@ namespace App\Domain\Blog\Repository;
 
 use App\Domain\Blog\Entity\BlogPost;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Symfony\Bridge\Doctrine\RegistryInterface;
+use Doctrine\Common\Persistence\ManagerRegistry;
 
 /**
  * @method BlogPost|null find($id, $lockMode = null, $lockVersion = null)
@@ -21,7 +21,7 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
  */
 class BlogPostRepository extends ServiceEntityRepository
 {
-    public function __construct(RegistryInterface $registry)
+    public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, BlogPost::class);
     }

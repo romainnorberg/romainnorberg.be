@@ -9,7 +9,10 @@
 
 namespace App\Domain\Blog\Entity;
 
+use DateTime;
+use DateTimeInterface;
 use Doctrine\ORM\Mapping as ORM;
+use Ramsey\Uuid\UuidInterface;
 
 /**
  * BlogPost.
@@ -28,35 +31,35 @@ class BlogPost
      * @ORM\GeneratedValue(strategy="CUSTOM")
      * @ORM\CustomIdGenerator(class="Ramsey\Uuid\Doctrine\UuidGenerator")
      */
-    private $id;
+    private UuidInterface $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
      */
-    private $title;
+    private string $title;
 
     /**
      * @var string
      *
      * @ORM\Column(name="slug", type="string", length=255, unique=true)
      */
-    private $slug;
+    private string $slug;
 
     /**
      * @var string
      *
      * @ORM\Column(name="description", type="string", length=2000)
      */
-    private $description;
+    private string $description;
 
     /**
      * @var string
      *
      * @ORM\Column(name="body", type="text")
      */
-    private $body;
+    private string $body;
 
     /**
      * @var Author
@@ -64,42 +67,38 @@ class BlogPost
      * @ORM\ManyToOne(targetEntity="Author")
      * @ORM\JoinColumn(name="author_id", referencedColumnName="id")
      */
-    private $author;
+    private ?Author $author;
 
     /**
      * @var string
      *
      * @ORM\Column(name="header_image", type="string", length=255)
      */
-    private $headerImage;
+    private string $headerImage;
 
     /**
      * @var string
      *
      * @ORM\Column(name="tags", type="json")
      */
-    private $tags;
+    private ?array $tags;
 
     /**
-     * @var \DateTime
-     *
      * @ORM\Column(name="created_at", type="datetime")
      */
-    private $createdAt;
+    private DateTimeInterface $createdAt;
 
     /**
-     * @var \DateTime
-     *
      * @ORM\Column(name="updated_at", type="datetime")
      */
-    private $updatedAt;
+    private DateTimeInterface $updatedAt;
 
     /**
      * @var bool
      *
      * @ORM\Column(name="is_active", type="boolean", options={"default"="0"})
      */
-    private $isActive = false;
+    private bool $isActive = false;
 
     /**
      * @return \Ramsey\Uuid\UuidInterface
@@ -208,7 +207,6 @@ class BlogPost
     /**
      * Set author.
      *
-     *
      * @return BlogPost
      */
     public function setAuthor(Author $author)
@@ -279,25 +277,13 @@ class BlogPost
         return $this->createdAt;
     }
 
-    /**
-     * Set updatedAt.
-     *
-     * @param \DateTime $updatedAt
-     *
-     * @return BlogPost
-     */
-    public function setUpdatedAt($updatedAt)
+    public function setUpdatedAt(DateTime $updatedAt)
     {
         $this->updatedAt = $updatedAt;
 
         return $this;
     }
 
-    /**
-     * Get updatedAt.
-     *
-     * @return \DateTime
-     */
     public function getUpdatedAt()
     {
         return $this->updatedAt;
@@ -309,11 +295,11 @@ class BlogPost
     public function prePersist()
     {
         if (!$this->getCreatedAt()) {
-            $this->setCreatedAt(new \DateTime());
+            $this->setCreatedAt(new DateTime());
         }
 
         if (!$this->getUpdatedAt()) {
-            $this->setUpdatedAt(new \DateTime());
+            $this->setUpdatedAt(new DateTime());
         }
     }
 
@@ -322,20 +308,14 @@ class BlogPost
      */
     public function preUpdate()
     {
-        $this->setUpdatedAt(new \DateTime());
+        $this->setUpdatedAt(new DateTime());
     }
 
-    /**
-     * @return bool
-     */
     public function isActive(): bool
     {
         return $this->isActive;
     }
 
-    /**
-     * @param bool $isActive
-     */
     public function setIsActive(bool $isActive): void
     {
         $this->isActive = $isActive;
