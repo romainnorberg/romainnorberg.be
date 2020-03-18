@@ -2,8 +2,8 @@
   "entrypoints": {
     "app": {
       "js": [
-        "/build/runtime.ba2079ff.js",
-        "/build/app.4c55c82c.js"
+        "/build/runtime.cf4317a3.js",
+        "/build/app.dfd6846b.js"
       ],
       "css": [
         "/build/app.a83fc9ce.css"
@@ -11,8 +11,8 @@
     },
     "resume": {
       "js": [
-        "/build/runtime.ba2079ff.js",
-        "/build/resume.bf41ad2e.js"
+        "/build/runtime.cf4317a3.js",
+        "/build/resume.2036c7b9.js"
       ],
       "css": [
         "/build/resume.232847e2.css"
@@ -20,20 +20,20 @@
     },
     "blog": {
       "js": [
-        "/build/runtime.ba2079ff.js",
-        "/build/blog.38957c4f.js"
+        "/build/runtime.cf4317a3.js",
+        "/build/blog.9683ab5c.js"
       ],
       "css": [
-        "/build/blog.c6e6e744.css"
+        "/build/blog.64e32b17.css"
       ]
     },
     "admin": {
       "js": [
-        "/build/runtime.ba2079ff.js",
-        "/build/admin.bd506ced.js"
+        "/build/runtime.cf4317a3.js",
+        "/build/admin.e3eb0ba8.js"
       ],
       "css": [
-        "/build/admin.c1bd9933.css"
+        "/build/admin.365d931c.css"
       ]
     }
   }
