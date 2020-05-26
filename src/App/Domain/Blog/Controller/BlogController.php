@@ -18,9 +18,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class BlogController extends AbstractController
 {
-    /**
-     * @var BlogPostRepository
-     */
     private BlogPostRepository $blogPostRepository;
 
     /**
