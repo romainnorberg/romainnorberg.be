@@ -24,8 +24,6 @@ use Ramsey\Uuid\UuidInterface;
 class BlogPost
 {
     /**
-     * @var \Ramsey\Uuid\UuidInterface
-     *
      * @ORM\Id
      * @ORM\Column(type="uuid", unique=true)
      * @ORM\GeneratedValue(strategy="CUSTOM")
@@ -34,29 +32,21 @@ class BlogPost
     private UuidInterface $id;
 
     /**
-     * @var string
-     *
      * @ORM\Column(name="title", type="string", length=255)
      */
     private string $title;
 
     /**
-     * @var string
-     *
      * @ORM\Column(name="slug", type="string", length=255, unique=true)
      */
     private string $slug;
 
     /**
-     * @var string
-     *
      * @ORM\Column(name="description", type="string", length=2000)
      */
     private string $description;
 
     /**
-     * @var string
-     *
      * @ORM\Column(name="body", type="text")
      */
     private string $body;
@@ -70,8 +60,6 @@ class BlogPost
     private ?Author $author;
 
     /**
-     * @var string
-     *
      * @ORM\Column(name="header_image", type="string", length=255)
      */
     private string $headerImage;
@@ -94,8 +82,6 @@ class BlogPost
     private DateTimeInterface $updatedAt;
 
     /**
-     * @var bool
-     *
      * @ORM\Column(name="is_active", type="boolean", options={"default"="0"})
      */
     private bool $isActive = false;

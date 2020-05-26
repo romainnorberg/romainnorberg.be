@@ -102,17 +102,8 @@
     "doctrine/reflection": {
         "version": "v1.0.0"
     },
-    "easycorp/easy-log-handler": {
-        "version": "1.0",
-        "recipe": {
-            "repo": "github.com/symfony/recipes",
-            "branch": "master",
-            "version": "1.0",
-            "ref": "70062abc2cd58794d2a90274502f81b55cd9951b"
-        },
-        "files": [
-            "config/packages/dev/easy_log_handler.yaml"
-        ]
+    "doctrine/sql-formatter": {
+        "version": "1.1.1"
     },
     "easycorp/easyadmin-bundle": {
         "version": "2.0",
@@ -130,6 +121,12 @@
     "egulias/email-validator": {
         "version": "2.1.11"
     },
+    "facade/ignition-contracts": {
+        "version": "1.0.0"
+    },
+    "filp/whoops": {
+        "version": "2.7.2"
+    },
     "friendsofphp/php-cs-fixer": {
         "version": "2.2",
         "recipe": {
@@ -141,9 +138,6 @@
         "files": [
             ".php_cs.dist"
         ]
-    },
-    "jdorn/sql-formatter": {
-        "version": "v1.2.17"
     },
     "laminas/laminas-zendframework-bridge": {
         "version": "1.0.1"
@@ -160,8 +154,8 @@
     "nikic/php-parser": {
         "version": "v4.2.4"
     },
-    "nunomaduro/pest": {
-        "version": "v0.1.0"
+    "nunomaduro/collision": {
+        "version": "v5.0.0-beta1"
     },
     "ocramius/package-versions": {
         "version": "1.5.1"
@@ -171,6 +165,9 @@
     },
     "pagerfanta/pagerfanta": {
         "version": "v2.1.3"
+    },
+    "pestphp/pest": {
+        "version": "dev-master"
     },
     "phar-io/manifest": {
         "version": "1.0.3"
@@ -201,6 +198,9 @@
     },
     "phpunit/php-file-iterator": {
         "version": "2.0.2"
+    },
+    "phpunit/php-invoker": {
+        "version": "3.0.0"
     },
     "phpunit/php-text-template": {
         "version": "1.2.1"
@@ -261,6 +261,9 @@
     },
     "scrivo/highlight.php": {
         "version": "v9.15.10.0"
+    },
+    "sebastian/code-unit": {
+        "version": "1.0.2"
     },
     "sebastian/code-unit-reverse-lookup": {
         "version": "1.0.1"

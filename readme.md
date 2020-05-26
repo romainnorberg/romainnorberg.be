@@ -8,3 +8,7 @@
 127.0.0.1       resume.romainnorberg.local
 127.0.0.1       blog.romainnorberg.local
 ```
+
+### Local
+
+- `symfony serve`
