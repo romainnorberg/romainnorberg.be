@@ -9,6 +9,7 @@
 
 namespace App\Domain\Home\Controller;
 
+use Romainnorberg\Bundle\RefindBundle\RefindInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -23,8 +24,9 @@ class HomeController extends AbstractController
      *     requirements={"domain"="%root_domain%"}
      * )
      */
-    public function index()
+    public function index(RefindInterface $refind)
     {
+        $refind->myFunction();
         return $this->render('home/index.html.twig');
     }
 }

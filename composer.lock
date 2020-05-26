@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "de03b5ee6796e45ac02492762c3f4a83",
+    "content-hash": "870c65db6b7f0624554871cf217f9e16",
     "packages": [
         {
             "name": "brick/math",
@@ -2725,6 +2725,68 @@
                 "uuid"
             ],
             "time": "2020-01-27T05:09:17+00:00"
+        },
+        {
+            "name": "romainnorberg/refind-bundle",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../refind-bundle",
+                "reference": "bba8198e3542166c12e1dfa510c7f35055c07ee1"
+            },
+            "require": {
+                "php": "^7.4",
+                "symfony/framework-bundle": "^5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.1",
+                "symfony/var-dumper": "^5.0",
+                "symfony/yaml": "^5.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Romainnorberg\\Bundle\\RefindBundle\\": "./src"
+                },
+                "exclude-from-classmap": [
+                    "./src/Tests/"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Romainnorberg\\Bundle\\RefindBundle\\Tests\\": "./src/Tests/"
+                }
+            },
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpunit"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Romain Norberg",
+                    "email": "romainnorberg@gmail.com"
+                }
+            ],
+            "description": "<package-description>",
+            "homepage": "https://github.com/romainnorberg/refind-bundle",
+            "keywords": [
+                "bundle",
+                "php",
+                "refind",
+                "symfony"
+            ],
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "scrivo/highlight.php",
@@ -10464,7 +10526,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "romainnorberg/refind-bundle": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
