@@ -21,8 +21,6 @@ use Ramsey\Uuid\UuidInterface;
 class Author
 {
     /**
-     * @var \Ramsey\Uuid\UuidInterface
-     *
      * @ORM\Id
      * @ORM\Column(type="uuid", unique=true)
      * @ORM\GeneratedValue(strategy="CUSTOM")
@@ -31,36 +29,26 @@ class Author
     private UuidInterface $id;
 
     /**
-     * @var string
-     *
      * @ORM\Column(name="name", type="string", length=255, unique=true)
      */
     private string $name;
 
     /**
-     * @var string
-     *
      * @ORM\Column(name="title", type="string", length=255)
      */
     private string $title;
 
     /**
-     * @var string
-     *
      * @ORM\Column(name="username", type="string", length=255, unique=true)
      */
     private string $username;
 
     /**
-     * @var string
-     *
      * @ORM\Column(name="company", type="string", length=255)
      */
     private string $company;
 
     /**
-     * @var string
-     *
      * @ORM\Column(name="short_bio", type="string", length=500)
      */
     private string $shortBio;
