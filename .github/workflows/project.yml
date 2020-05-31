@@ -53,8 +53,7 @@ jobs:
         run: |
           composer global require hirak/prestissimo --no-interaction --no-ansi --no-progress --no-suggest # downloading dependencies in parallel
           composer install --no-interaction --no-ansi --no-progress --no-suggest -o
-
-        #composer validate --no-check-all --strict
+          composer validate --no-check-all --strict
 
       - name: Load fixtures
         run: |
@@ -63,6 +62,6 @@ jobs:
 
       - name: Run tests
         run: |
-          ./vendor/bin/phpunit
+          ./vendor/bin/pest
         env:
           SYMFONY_ENV: test
