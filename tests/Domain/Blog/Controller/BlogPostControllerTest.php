@@ -9,5 +9,5 @@ test('blog_post_markdown_syntax', function () {
     $this->assertResponseIsSuccessful();
     $this->assertSelectorTextContains('title', 'Work with OVH API using Postman');
 
-    assertMatchesSnapshot(preg_replace('/\s*/m', '', preg_replace("/[\r\n]+/", "", $crawler->filter('div.markup')->html())));
+    assertMatchesSnapshot($crawler->filter('div.markup')->html());
 });

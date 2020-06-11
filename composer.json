@@ -49,7 +49,7 @@
         "pestphp/pest": "^0.1.5",
         "phpunit/phpunit": "^9.0",
         "sensiolabs/security-checker": "^6.0",
-        "spatie/pest-plugin-snapshots": "dev-master",
+        "spatie/pest-plugin-snapshots": "^0.1",
         "spatie/phpunit-snapshot-assertions": "^4.0",
         "symfony/browser-kit": "^5.0",
         "symfony/css-selector": "^5.0",
