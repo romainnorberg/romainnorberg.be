@@ -45,7 +45,7 @@
                     </figure>
                 </div>
                 <div class="column has-text-grey-light has-text-right-in-desktop">
-                    <p class="has-text-weight-light">Belgium or Remote</p>
+                    <p class="has-text-weight-light">Age: {{ profile.age }} / Localtion: Belgium or Remote</p>
                     <p class="has-text-weight-light">romainnorberg@gmail.com</p>
                     <div class="social-icon">
                         <a href="https://twitter.com/romainnorberg" class="twitter" title="Twitter">
@@ -83,7 +83,8 @@
                     <div class="summary">
                         <div class="title is-size-5 has-text-primary has-text-weight-bold">About me</div>
                         <div class="wrapper">
-                            <p>During the last 7 years, I have had the honor to work for a large number of companies,
+                            <p>During the last {{ profile.experience_age }} years, I have had the honor to work for a
+                                large number of companies,
                                 based in Belgium or France, as a web developer. These companies practice e-commerce,
                                 customer data management, bank flow management and more.</p>
 
@@ -106,7 +107,8 @@
                             </div>
                             <div class="is-size-7">Mar. 2018 - Present</div>
                             <ul>
-                                <li>Migrate Symfony from 2.8 to 3.4 and from 3.4 to 4.x <i>(webpack, migration,...)</i></li>
+                                <li>Migrate Symfony from 2.8 to 3.4 and from 3.4 to 4.x <i>(webpack, migration,...)</i>
+                                </li>
                                 <li>Implementation of Unit Testing, Integration Testing and Functional Testing (Travis
                                     CI)
                                 </li>
@@ -159,22 +161,22 @@
 
                             <ul>
                                 <li>Implementation of webservices allowing the consultation of
-                                    automobile spare parts catalogs (ETAI / TECDOC)
+                                    automobile spare parts catalogs <i>(ETAI / TECDOC)</i>
                                 </li>
                                 <li>Implementation of WSDL webservice allowing the supply of automotive
                                     spare parts from different platforms and suppliers
                                 </li>
                                 <li>Development and update of existing frontend and backend modules</li>
-                                <li>Development of REST APIs (Symfony 3.x)
+                                <li>Development of REST APIs <i>(Symfony 3.x)</i>
                                 </li>
                                 <ul>
-                                    <li>- Spare parts + vehicles catalog</li>
-                                    <li>- Registration search service (connected to the AAA-Data solution
-                                        https://www.aaa-data.fr/)
+                                    <li>- Spare parts + autoparts catalog</li>
+                                    <li>- Registration search service <i>(connected to the AAA-Data solution
+                                            https://www.aaa-data.fr/)</i>
                                     </li>
                                 </ul>
                                 <li>Implementation of specific services from the Tecdoc-API solution
-                                    (Type-mine, Vin number)
+                                    <i>(Type-mine, Vin number)</i>
                                 </li>
                             </ul>
 
@@ -182,11 +184,11 @@
                             <ul>
                                 <li>Implementation and configuration of CDN Clouflare</li>
                                 <li>Implementation of deployment solutions from Github on PASS type platforms
-                                    (http://clever-cloud.fr)
+                                    <i>(http://clever-cloud.fr)</i>
                                 </li>
-                                <li>Implementation of monitoring solutions (NewRelic, Datadog)</li>
+                                <li>Implementation of monitoring solutions <i>(NewRelic, Datadog)</i></li>
                                 <li>Help with the migration of the complete server infrastructure from OVH to the
-                                    Ecritel outsourcer (http://www.ecritel.fr/fr/)
+                                    Ecritel outsourcer <i>(http://www.ecritel.fr/fr/)</i>
                                 </li>
                             </ul>
                         </div>
@@ -271,6 +273,17 @@
                     <div class="languages">
                         <div class="title is-size-5 has-text-primary has-text-weight-bold">Languages</div>
                         <div class="wrapper">French, English</div>
+                    </div>
+                    <div class="interests">
+                        <div class="title is-size-5 has-text-primary has-text-weight-bold">Interests</div>
+                        <div class="wrapper">
+                            <ul>
+                                <li>Sports <i>(Running, Bicycle, Fight Self-defence)</i></li>
+                                <li>Travel and discovering new cultures</li>
+                                <li>Acquire new skills everyday</li>
+                                <li>Contribute to open-source projects</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
