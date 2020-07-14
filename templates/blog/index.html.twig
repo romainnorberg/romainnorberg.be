@@ -13,7 +13,7 @@
                             <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
                                 <a href="{{ path('blog_post', {'slug': blog_post.slug}) }}" class="flex flex-wrap no-underline hover:no-underline">
                                     <img src="{{ blog_post.headerImage }}" class="h-64 w-full rounded-t pb-1">
-                                    <p class="w-full text-gray-600 text-xs md:text-sm px-6">
+                                    <p class="w-full text-gray-600 text-xs md:text-xs px-6">
                                         {{ include('blog/include/tags.html.twig') }}
                                     </p>
                                     <div class="w-full font-bold text-xl text-gray-900 px-6">
