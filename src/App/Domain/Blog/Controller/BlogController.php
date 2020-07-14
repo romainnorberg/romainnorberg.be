@@ -41,7 +41,14 @@ class BlogController extends AbstractController
     public function index(): Response
     {
         return $this->render('blog/index.html.twig', [
-            'blog_posts' => $this->blogPostRepository->findAll(),
+            'blog_posts' => $this->blogPostRepository->findBy(
+                [
+                    'isActive' => true,
+                ],
+                [
+                    'createdAt' => 'DESC',
+                ]
+            ),
         ]);
     }
 
