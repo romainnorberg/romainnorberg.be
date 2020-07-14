@@ -151,6 +151,9 @@
     "myclabs/deep-copy": {
         "version": "1.9.3"
     },
+    "nesbot/carbon": {
+        "version": "2.36.1"
+    },
     "nikic/php-parser": {
         "version": "v4.2.4"
     },
@@ -168,6 +171,15 @@
     },
     "pestphp/pest": {
         "version": "dev-master"
+    },
+    "pestphp/pest-plugin": {
+        "version": "v0.2.1"
+    },
+    "pestphp/pest-plugin-coverage": {
+        "version": "v0.2.0"
+    },
+    "pestphp/pest-plugin-init": {
+        "version": "v0.2.2"
     },
     "phar-io/manifest": {
         "version": "1.0.3"
@@ -327,6 +339,9 @@
     },
     "spatie/commonmark-highlighter": {
         "version": "2.0.0"
+    },
+    "spatie/pest-plugin-snapshots": {
+        "version": "dev-master"
     },
     "spatie/phpunit-snapshot-assertions": {
         "version": "2.1.3"
