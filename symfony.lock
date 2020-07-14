@@ -169,6 +169,15 @@
     "pestphp/pest": {
         "version": "dev-master"
     },
+    "pestphp/pest-plugin": {
+        "version": "v0.2.1"
+    },
+    "pestphp/pest-plugin-coverage": {
+        "version": "v0.2.0"
+    },
+    "pestphp/pest-plugin-init": {
+        "version": "v0.2.2"
+    },
     "phar-io/manifest": {
         "version": "1.0.3"
     },
