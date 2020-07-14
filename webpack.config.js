@@ -20,9 +20,20 @@ Encore
   .addEntry('blog', './assets/js/blog.js')
   .addEntry('admin', './assets/js/admin/admin.js')
 
-  .addPlugin(new CopyWebpackPlugin([
-    {from: 'assets/images', to: 'images', toType: 'dir', ignore: [".DS_Store"]},
-  ]))
+  .addPlugin(new CopyWebpackPlugin(
+    {
+      patterns: [
+        {
+          from:        'assets/images',
+          to:          'images',
+          toType:      'dir',
+          globOptions: {
+            ignore: [".DS_Store"],
+          }
+        }
+      ]
+    },
+  ))
 
   //.splitEntryChunks()
   .enableSingleRuntimeChunk()
@@ -30,11 +41,11 @@ Encore
   //.enableSourceMaps(!Encore.isProduction())
   .enableVersioning(Encore.isProduction())
 
-  //.enableIntegrityHashes(Encore.isProduction())
-  //.configureBabel(null, {
-  //  useBuiltIns: 'usage',
-  //  corejs:      3,
-  //})
+//.enableIntegrityHashes(Encore.isProduction())
+//.configureBabel(null, {
+//  useBuiltIns: 'usage',
+//  corejs:      3,
+//})
 ;
 
 Encore.enableSassLoader(function (options) {
