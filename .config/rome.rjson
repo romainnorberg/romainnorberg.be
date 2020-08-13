@@ -1,0 +1,10 @@
+// For configuration documentation see http://romefrontend.dev/#project-configuration
+name: "romainnorberg.be"
+root: true
+lint: {
+    ignore: [
+        ".config/rome.rjson"
+        "!clevercloud/*"
+        "!clever.json"
+    ]
+}

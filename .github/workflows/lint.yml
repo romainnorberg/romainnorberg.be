@@ -1,5 +1,5 @@
 on: [push]
-name: Main
+name: Lint
 jobs:
   php-cs-fixer:
     name: PHP-CS-Fixer
@@ -10,3 +10,17 @@ jobs:
         uses: docker://oskarstark/php-cs-fixer-ga
         with:
           args: ./src --config=.php_cs.dist --diff --dry-run
+  rome-frontend-check:
+    name: Rome frontend check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Install node v12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Run Rome check
+        id: check
+        uses: romainnorberg/rome-frontend-check-action@master
