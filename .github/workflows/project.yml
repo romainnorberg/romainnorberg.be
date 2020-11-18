@@ -26,10 +26,11 @@ jobs:
 
       # doc: https://github.com/marketplace/actions/setup-php-action
       - name: Setup PHP
-        uses: shivammathur/setup-php@master
+        uses: shivammathur/setup-php@v2
         with:
           php-version: '7.4'
           extension-csv: apcu,mbstring,mysql
+          tools: composer:v2
 
       - name: Configure PHP
         run: |
@@ -51,7 +52,6 @@ jobs:
 
       - name: Install composer dependencies
         run: |
-          composer global require hirak/prestissimo --no-interaction --no-ansi --no-progress --no-suggest # downloading dependencies in parallel
           composer install --no-interaction --no-ansi --no-progress --no-suggest -o
           composer validate --no-check-all --strict
 

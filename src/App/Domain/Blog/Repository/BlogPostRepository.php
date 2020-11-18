@@ -11,7 +11,7 @@ namespace App\Domain\Blog\Repository;
 
 use App\Domain\Blog\Entity\BlogPost;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
-use Doctrine\Common\Persistence\ManagerRegistry;
+use Doctrine\Persistence\ManagerRegistry;
 
 /**
  * @method BlogPost|null find($id, $lockMode = null, $lockVersion = null)
