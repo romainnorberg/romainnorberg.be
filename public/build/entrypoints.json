@@ -6,7 +6,7 @@
         "/build/app.40e97921.js"
       ],
       "css": [
-        "/build/app.17268955.css"
+        "/build/app.c86cd718.css"
       ]
     },
     "resume": {
@@ -15,25 +15,25 @@
         "/build/resume.981b03a8.js"
       ],
       "css": [
-        "/build/resume.68de8fe9.css"
+        "/build/resume.dbfd3ab0.css"
       ]
     },
     "blog": {
       "js": [
         "/build/runtime.d94b3b43.js",
-        "/build/blog.e68a11b1.js"
+        "/build/blog.e874fa08.js"
       ],
       "css": [
-        "/build/blog.3de0e418.css"
+        "/build/blog.3fd0d60a.css"
       ]
     },
     "admin": {
       "js": [
         "/build/runtime.d94b3b43.js",
-        "/build/admin.7064e69c.js"
+        "/build/admin.9618e2e5.js"
       ],
       "css": [
-        "/build/admin.6c042f73.css"
+        "/build/admin.fe3987b2.css"
       ]
     }
   }
