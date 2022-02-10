@@ -7,7 +7,7 @@
     "core-js": "3",
     "easymde": "^2.8.0",
     "highlight.js": "^10.1.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^9.0.2",
     "tailwindcss": "^1.1.0"
